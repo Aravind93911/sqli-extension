@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>🛡️ Tech Bazzar Dashboard</h1>
+            <p>Real-time SQL Injection Detection</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Stats -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-label">Total Threats</div>
+                    <div class="stat-value" id="totalThreats">0</div>
+                </div>
+                <div class="stat-card threat">
+                    <div class="stat-label">Malicious</div>
+                    <div class="stat-value" id="maliciousCount">0</div>
+                </div>
+                <div class="stat-card safe">
+                    <div class="stat-label">Safe</div>
+                    <div class="stat-value" id="safeCount">0</div>
+                </div>
+            </section>
+
+            <!-- Threats Table -->
+            <section class="threats-section">
+                <h2>Recent Threats</h2>
+                <table class="threats-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Confidence</th>
+                            <th>Status</th>
+                            <th>Query</th>
+                        </tr>
+                    </thead>
+                    <tbody id="threatsTableBody">
+                        <tr>
+                            <td colspan="4" style="text-align: center; color: #636e72;">
+                                No threats detected yet
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
